@@ -62,3 +62,19 @@ create table raw_sales (
     taxamt numeric,
     freight numeric
 )
+
+
+Create view clean_customers as 
+select
+	customerkey,
+	occupation,
+	name,
+	cast(to_date(birthdate, 'YYYY"년" FMMM"월" FMDD"일"') AS DATE) as birth_date,
+	maritalstatus,
+	gender,
+	yearlyincome,
+	numberchildren,
+	region
+from raw_customers
+
+
