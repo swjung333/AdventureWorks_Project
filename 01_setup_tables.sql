@@ -1,4 +1,3 @@
-
 Create table raw_territory (
 	territory_key int primary key,
 	region text,
@@ -6,13 +5,11 @@ Create table raw_territory (
 	"group" text
 )
 
-
 Create table raw_budget (
 	category text,
 	target numeric,
 	period int
 )
-
 
 Create table raw_customers (
 	customerkey int primary key,
@@ -25,7 +22,6 @@ Create table raw_customers (
 	numberchildren int,
 	region text
 )
-
 
 Create table raw_products (
 	productkey int primary key,
@@ -48,7 +44,6 @@ Create table raw_products (
 	description text
 )
 
-
 create table raw_sales (
 	salesordernumber text,
     orderdate text,
@@ -63,7 +58,6 @@ create table raw_sales (
     freight numeric
 )
 
-
 Create view clean_customers as 
 select
 	customerkey,
@@ -77,4 +71,5 @@ select
 	region
 from raw_customers
 
-
+select *
+from clean_customers
