@@ -1,3 +1,4 @@
+---- Create the territory table ----
 Create table raw_territory (
 	territory_key int primary key,
 	region text,
@@ -5,12 +6,14 @@ Create table raw_territory (
 	"group" text
 )
 
+---- Create the budget table ----
 Create table raw_budget (
 	category text,
 	target numeric,
 	period int
 )
 
+---- Create the customers table ----
 Create table raw_customers (
 	customerkey int primary key,
 	occupation text,
@@ -23,6 +26,7 @@ Create table raw_customers (
 	region text
 )
 
+---- Creat the products table ----
 Create table raw_products (
 	productkey int primary key,
 	productname text,
@@ -44,6 +48,7 @@ Create table raw_products (
 	description text
 )
 
+---- Create the sales table ----
 create table raw_sales (
 	salesordernumber text,
     orderdate text,
@@ -58,6 +63,7 @@ create table raw_sales (
     freight numeric
 )
 
+---- Create the cleaning view ----
 Create view clean_customers as 
 select
 	customerkey,
@@ -71,19 +77,19 @@ select
 	region
 from raw_customers
 
+---- Check the cleaned table ----
 select *
 from clean_customers
 
-
----- Create the master table ------
-CREATE VIEW master_sales AS
-SELECT 
+---- Create the master table ----
+create view master_sales as
+select 
     s.salesordernumber,
     s.orderdate,
     p.productname,
     p.color,
     p.modelname,
-    c.name AS customer_name,
+    c.name as customer_name,
     c.birth_date,
     c.gender,
     c.yearlyincome,
@@ -91,8 +97,12 @@ SELECT
     t.country,
     s.orderquantity,
     s.salesamount,
-    (s.salesamount - (s.productcost * s.orderquantity)) AS profit
-FROM raw_sales s
-JOIN raw_products p ON s.productkey = p.productkey
-JOIN clean_customers c ON s.customerkey = c.customerkey
-JOIN raw_territory t ON s.salesterritorykey = t.territory_key
+    (s.salesamount - (s.productcost * s.orderquantity)) as profit
+from raw_sales s
+join raw_products p on s.productkey = p.productkey
+join clean_customers c on s.customerkey = c.customerkey
+join raw_territory t on s.salesterritorykey = t.territory_key
+
+---- Check the master table ----
+select *
+from master_sales
