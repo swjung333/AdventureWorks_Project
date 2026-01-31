@@ -1,4 +1,5 @@
 ---- Create the territory table ----
+
 Create table raw_territory (
 	territory_key int primary key,
 	region text,
@@ -51,7 +52,7 @@ Create table raw_products (
 ---- Create the sales table ----
 create table raw_sales (
 	salesordernumber text,
-    orderdate text,
+    orderdate date,
     productkey int,
     customerkey int,
     salesterritorykey int,
@@ -62,6 +63,7 @@ create table raw_sales (
     taxamt numeric,
     freight numeric
 )
+
 
 ---- Create the cleaning view ----
 Create view clean_customers as 
@@ -81,7 +83,7 @@ from raw_customers
 select *
 from clean_customers
 
----- Create the master table ----
+---- Create the master view ----
 create view master_sales as
 select 
     s.salesordernumber,
