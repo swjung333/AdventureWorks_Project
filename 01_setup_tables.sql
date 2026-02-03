@@ -91,6 +91,7 @@ select
     p.productname,
     p.color,
     p.modelname,
+    p.category,
     p.subcategory,
     c.name as customer_name,
     c.birth_date,
