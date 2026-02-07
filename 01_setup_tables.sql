@@ -84,28 +84,24 @@ select *
 from clean_customers
 
 ---- Create the master view ----
-create view master_sales as
-select 
-    s.salesordernumber,
+create view master_sales AS
+SELECT 
     s.orderdate,
     p.productname,
     p.color,
-    p.modelname,
-    p.category,
-    p.subcategory,
-    c.name as customer_name,
-    c.birth_date,
+	p.category,
+	p.subcategory,
+    c.name AS customer_name,
     c.gender,
-    c.yearlyincome,
     t.region,
     t.country,
     s.orderquantity,
     s.salesamount,
-    (s.salesamount - (s.productcost * s.orderquantity)) as profit
-from raw_sales s
-join raw_products p on s.productkey = p.productkey
-join clean_customers c on s.customerkey = c.customerkey
-join raw_territory t on s.salesterritorykey = t.territory_key
+    (s.salesamount - (s.productcost * s.orderquantity)) AS profit
+FROM raw_sales s
+JOIN raw_products p ON s.productkey = p.productkey
+JOIN clean_customers c ON s.customerkey = c.customerkey
+JOIN raw_territory t ON s.salesterritorykey = t.territory_key
 
 ---- Check the master table ----
 select *
