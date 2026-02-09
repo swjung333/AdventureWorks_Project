@@ -45,7 +45,8 @@ This page provides a high-level view of company health and geographic performanc
 ### Page 2: Product & Customer Insights
 This page dives into the operational details to identify drivers of sales and areas for improvement.
 * **Key Visuals**: Sales by Product Subcategory, Top/Bottom 10 Products, and a demographic Matrix (Color/Gender).
-* **Objective**: Inventory management, marketing demographic targeting, and customer relationship management.
+* **Objective**: Inventory management, Identifying sales patterns by gender and product color, and customer relationship management.
 <img width="1316" height="742" alt="image" src="https://github.com/user-attachments/assets/9810aaed-0d6c-4637-aa64-8a5d3cbccc6f" />
+
 
 
