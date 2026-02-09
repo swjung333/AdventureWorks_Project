@@ -1,4 +1,4 @@
-# Data Analytics Project: Sales Performance Dashboard (pgAdmin 4 + PowerBI)
+# Sales Performance Dashboard (pgAdmin 4 + PowerBI)
 
 ## Project Overview
 This project is to analyze sales data and provide actionable insights, using SQL and PowerBI. The objective is to transform raw data into a dynamic, two-page Power BI dashboard that visualizes overall sales performance and dive deep into product and customer behaviors.
@@ -39,9 +39,12 @@ An interactive sales dashboard was built to analyze key performance indicators:
 This page provides a high-level view of company health and geographic performance.
 * **Key Visuals**: Sales and Profit Trends, Sales by Country, and Regional breakdowns.
 * **Objective**: Quick assessment of revenue targets and geographic trends.
-<img width="1286" height="723" alt="Sales Performance Overview" src="https://github.com/user-attachments/assets/7b54a518-c4d9-41b7-a0cd-7d3899a4e190" />
+<img width="1315" height="741" alt="image" src="https://github.com/user-attachments/assets/cc20de3f-6b48-403a-9af3-22e47ba44afb" />
+
 
 ### Page 2: Product & Customer Insights
 This page dives into the operational details to identify drivers of sales and areas for improvement.
 * **Key Visuals**: Sales by Product Subcategory, Top/Bottom 10 Products, and a demographic Matrix (Color/Gender).
 * **Objective**: Inventory management, marketing demographic targeting, and customer relationship management.
+<img width="1316" height="742" alt="image" src="https://github.com/user-attachments/assets/9810aaed-0d6c-4637-aa64-8a5d3cbccc6f" />
+
