@@ -31,7 +31,7 @@ The `master_sales` view was imported into Power BI to create the data model.
 ### 3️⃣ Power BI Dashboard Creation
 An interactive sales dashboard was built to analyze key performance indicators:
 * **DAX Measures**: `SUM` was used to to develop key performance metrics for **Total Sales**, **Total Quantity**, and **Total Profit**.
-* **Visualization**: Charts and graphs were created to visualize sales trends, profitability, and customer demographics based on the processed data.
+* **Visualization**: Charts and graphs were created to visualize sales trends and profitability based on the processed data.
 
 ## Dashboard Features
 
@@ -47,4 +47,5 @@ This page dives into the operational details to identify drivers of sales and ar
 * **Key Visuals**: Sales by Product Subcategory, Top/Bottom 10 Products, and a demographic Matrix (Color/Gender).
 * **Objective**: Inventory management, marketing demographic targeting, and customer relationship management.
 <img width="1316" height="742" alt="image" src="https://github.com/user-attachments/assets/9810aaed-0d6c-4637-aa64-8a5d3cbccc6f" />
+
 
