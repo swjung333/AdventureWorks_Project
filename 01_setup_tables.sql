@@ -97,7 +97,7 @@ SELECT
     t.country,
     s.orderquantity,
     s.salesamount,
-    (s.salesamount - (s.productcost * s.orderquantity)) AS profit
+    (s.salesamount - (coalesce(s.productcost, 0) * coalesce(s.orderquantity, 0))) AS profit
 FROM raw_sales s
 JOIN raw_products p ON s.productkey = p.productkey
 JOIN clean_customers c ON s.customerkey = c.customerkey
@@ -106,3 +106,32 @@ JOIN raw_territory t ON s.salesterritorykey = t.territory_key
 ---- Check the master table ----
 select *
 from master_sales
+
+---- Average sales by country ----
+select t.country,
+	   sum(s.salesamount) as total_sales,
+	   count(distinct s.salesordernumber) as total_orders,
+	   sum(s.salesamount) / nullif(count(distinct s.salesordernumber), 0) as average_sales
+from raw_sales s
+join raw_territory t on s.salesterritorykey = t.territory_key
+group by 1
+order by 4 desc
+
+----  Total quantity sold by top 10 products ----
+select p.productname,
+	   sum(s.orderquantity) as total_quantity_sold
+from raw_sales s
+join raw_products p ON s.productkey = p.productkey
+group by 1
+order by 2 DESC
+limit 10
+
+----  Total quantity sold by bottom 10 products ----
+select p.productname,
+	   sum(s.orderquantity) as total_quantity_sold
+from raw_sales s
+join raw_products p ON s.productkey = p.productkey
+group by 1
+order by 2
+limit 10
+
