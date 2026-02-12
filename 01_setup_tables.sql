@@ -79,33 +79,25 @@ select
 	region
 from raw_customers
 
----- Check the cleaned table ----
-select *
-from clean_customers
-
 ---- Create the master view ----
-create view master_sales AS
-SELECT 
+create view master_sales as
+select 
     s.orderdate,
     p.productname,
     p.color,
 	p.category,
 	p.subcategory,
-    c.name AS customer_name,
+    c.name as customer_name,
     c.gender,
     t.region,
     t.country,
     s.orderquantity,
     s.salesamount,
-    (s.salesamount - (coalesce(s.productcost, 0) * coalesce(s.orderquantity, 0))) AS profit
-FROM raw_sales s
-JOIN raw_products p ON s.productkey = p.productkey
-JOIN clean_customers c ON s.customerkey = c.customerkey
-JOIN raw_territory t ON s.salesterritorykey = t.territory_key
-
----- Check the master table ----
-select *
-from master_sales
+    (s.salesamount - (coalesce(s.productcost, 0) * coalesce(s.orderquantity, 0))) as profit
+from raw_sales s
+join raw_products p on s.productkey = p.productkey
+join clean_customers c on s.customerkey = c.customerkey
+join raw_territory t on s.salesterritorykey = t.territory_key
 
 ---- Average sales by country ----
 select t.country,
@@ -121,16 +113,16 @@ order by 4 desc
 select p.productname,
 	   sum(s.orderquantity) as total_quantity_sold
 from raw_sales s
-join raw_products p ON s.productkey = p.productkey
+join raw_products p on s.productkey = p.productkey
 group by 1
-order by 2 DESC
+order by 2 desc
 limit 10
 
 ----  Total quantity sold by bottom 10 products ----
 select p.productname,
 	   sum(s.orderquantity) as total_quantity_sold
 from raw_sales s
-join raw_products p ON s.productkey = p.productkey
+join raw_products p on s.productkey = p.productkey
 group by 1
 order by 2
 limit 10
