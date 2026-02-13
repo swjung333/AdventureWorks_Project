@@ -49,7 +49,11 @@ This page dives into the operational details to identify drivers of sales and ar
 * **Objective**: Inventory management, Identifying sales patterns by gender and product color, and customer relationship management.
 <img width="1436" height="810" alt="Product   Customer Insights" src="https://github.com/user-attachments/assets/b0516605-ff10-4929-bf0f-b5575fc1dab0" />
 
-
+### Key Insights from the Analysis
+- **Regional Dominance**: While the United States leads in total sales followed by Australia, accounting for over 60% of sales, Australia and Germany actually show the highest average sales per transaction.
+- **Product Preferences**: Specific product colors, such as black and red, drive the majority of sales volumn across all regions.
+- **Profitability Drivers**: High-column products do not always correlate with high profit margins, indicating the need for targeted pricing strategies on items.
+- **Seasonal Trends**: Sales volumn shows distinct spikes during holiday (Christmas) periods, suggesting seasonal inventory management is critical.
 
 
 
