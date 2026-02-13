@@ -109,21 +109,3 @@ join raw_territory t on s.salesterritorykey = t.territory_key
 group by 1
 order by 4 desc
 
-----  Total quantity sold by top 10 products ----
-select p.productname,
-	   sum(s.orderquantity) as total_quantity_sold
-from raw_sales s
-join raw_products p on s.productkey = p.productkey
-group by 1
-order by 2 desc
-limit 10
-
-----  Total quantity sold by bottom 10 products ----
-select p.productname,
-	   sum(s.orderquantity) as total_quantity_sold
-from raw_sales s
-join raw_products p on s.productkey = p.productkey
-group by 1
-order by 2
-limit 10
-
