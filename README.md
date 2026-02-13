@@ -30,7 +30,7 @@ The `master_sales` view was imported into Power BI to create the data model.
 
 ### 3️⃣ Power BI Dashboard Creation
 An interactive sales dashboard was built to analyze key performance indicators:
-* **DAX Measures**: `SUM` was used to to develop key performance metrics for **Total Sales**, **Total Quantity**, and **Total Profit**.
+* **DAX Measures**: `SUM` was used to to develop key performance metrics for **Total Sales**, **Total Quantity**, and **Total Profit**. Furthermore, `DIVIDE` and `DISTINCTCOUNT` were used for **Average Sales per Order** to ensure the per-transaction analysis
 * **Visualization**: Charts and graphs were created to visualize sales trends and profitability based on the processed data.
 
 ## Dashboard Features
@@ -39,14 +39,17 @@ An interactive sales dashboard was built to analyze key performance indicators:
 This page provides a high-level view of company health and geographic performance.
 * **Key Visuals**: Sales and Profit Trends, Sales by Country, and Regional breakdowns.
 * **Objective**: Quick assessment of revenue targets and geographic trends.
-<img width="1315" height="741" alt="image" src="https://github.com/user-attachments/assets/cc20de3f-6b48-403a-9af3-22e47ba44afb" />
+<img width="1437" height="811" alt="Sales Performance Overview" src="https://github.com/user-attachments/assets/5c11ac2a-9190-4605-8445-a59728dccdc6" />
+
 
 
 ### Page 2: Product & Customer Insights
 This page dives into the operational details to identify drivers of sales and areas for improvement.
 * **Key Visuals**: Sales by Product Subcategory, Top/Bottom 10 Products, and a demographic Matrix (Color/Gender).
 * **Objective**: Inventory management, Identifying sales patterns by gender and product color, and customer relationship management.
-<img width="1316" height="742" alt="image" src="https://github.com/user-attachments/assets/9810aaed-0d6c-4637-aa64-8a5d3cbccc6f" />
+<img width="1436" height="810" alt="Product   Customer Insights" src="https://github.com/user-attachments/assets/b0516605-ff10-4929-bf0f-b5575fc1dab0" />
+
+
 
 
 
