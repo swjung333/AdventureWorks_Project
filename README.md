@@ -30,7 +30,7 @@ The `master_sales` view was imported into Power BI to create the data model.
 
 ### 3️⃣ Power BI Dashboard Creation
 An interactive sales dashboard was built to analyze key performance indicators:
-* **DAX Measures**: `SUM` was used to to develop key performance metrics for **Total Sales**, **Total Quantity**, and **Total Profit**. Furthermore, `DIVIDE` and `DISTINCTCOUNT` were used for **Average Sales per Order** to ensure the per-transaction analysis
+* **DAX Measures**: `SUM` was used to to develop key performance metrics for **Total Sales**, **Total Qty (Quantity)**, and **Total Profit**. Furthermore, `DIVIDE` and `DISTINCTCOUNT` were used for **Average Sales (per Order)** to ensure the per-transaction analysis
 * **Visualization**: Charts and graphs were created to visualize sales trends and profitability based on the processed data.
 
 ## Dashboard Features
@@ -54,6 +54,7 @@ This page dives into the operational details to identify drivers of sales and ar
 - **Product Preferences**: Specific product colors, such as black and red, drive the majority of sales volumn across all regions.
 - **Profitability Drivers**: High-column products do not always correlate with high profit margins, indicating the need for targeted pricing strategies on items.
 - **Seasonal Trends**: Sales volumn shows distinct spikes during holiday (Christmas) periods, suggesting seasonal inventory management is critical.
+
 
 
 
