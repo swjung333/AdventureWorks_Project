@@ -83,6 +83,7 @@ from raw_customers
 create view master_sales as
 select 
     s.orderdate,
+    s.salesordernumber,
     p.productname,
     p.color,
 	p.category,
@@ -98,14 +99,3 @@ from raw_sales s
 join raw_products p on s.productkey = p.productkey
 join clean_customers c on s.customerkey = c.customerkey
 join raw_territory t on s.salesterritorykey = t.territory_key
-
----- Average sales by country ----
-select t.country,
-	   sum(s.salesamount) as total_sales,
-	   count(distinct s.salesordernumber) as total_orders,
-	   sum(s.salesamount) / nullif(count(distinct s.salesordernumber), 0) as average_sales
-from raw_sales s
-join raw_territory t on s.salesterritorykey = t.territory_key
-group by 1
-order by 4 desc
-
