@@ -46,7 +46,7 @@ This page provides a high-level view of company health and geographic performanc
 ### Page 2: Product & Customer Insights
 This page dives into the operational details to identify drivers of sales and areas for improvement.
 * **Key Visuals**: Sales by Product Subcategory, Top/Bottom 10 Products, and a demographic Matrix (Color/Gender).
-* **Objective**: Inventory management, Identifying sales patterns by gender and product color, and customer relationship management.
+* **Objective**: Inventory management, and Identifying sales patterns by gender and product color.
 <img width="1436" height="810" alt="Product   Customer Insights" src="https://github.com/user-attachments/assets/b0516605-ff10-4929-bf0f-b5575fc1dab0" />
 
 ### Key Insights from the Analysis
@@ -54,6 +54,7 @@ This page dives into the operational details to identify drivers of sales and ar
 - **Product Preferences**: Specific product colors, such as black and red, drive the majority of sales volumn across all regions.
 - **Profitability Drivers**: High-column products do not always correlate with high profit margins, indicating the need for targeted pricing strategies on items.
 - **Seasonal Trends**: Sales volumn shows distinct spikes during holiday (Christmas) periods, suggesting seasonal inventory management is critical.
+
 
 
 
