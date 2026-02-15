@@ -94,7 +94,7 @@ select
     t.country,
     s.orderquantity,
     s.salesamount,
-    (s.salesamount - (coalesce(s.productcost, 0) * coalesce(s.orderquantity, 0))) as profit
+    (coalesce(s.salesamount, 0) - (coalesce(s.productcost, 0) * coalesce(s.orderquantity, 0))) as profit
 from raw_sales s
 join raw_products p on s.productkey = p.productkey
 join clean_customers c on s.customerkey = c.customerkey
