@@ -1,7 +1,7 @@
-# Sales Performance Dashboard (pgAdmin 4 + PowerBI)
+# Sales Performance Dashboard (pgAdmin 4 + Power BI)
 
 ## Project Overview
-This project is to analyze sales data and provide actionable insights, using SQL and PowerBI. The objective is to transform raw data into a dynamic, two-page Power BI dashboard that visualizes overall sales performance and dive deep into product and customer behaviors.
+This project is to analyze sales data and provide actionable insights, using SQL and Power BI. The objective is to transform raw data into a dynamic, two-page Power BI dashboard that visualizes overall sales performance and dive deep into product and customer behaviors.
 
 ## Dataset and Structure
 The project utilizes data sourced from PostgreSQL (queried via pgAdmin 4).
@@ -30,16 +30,17 @@ The `master_sales` view was imported into Power BI to create the data model.
 
 ### 3️⃣ Power BI Dashboard Creation
 An interactive sales dashboard was built to analyze key performance indicators:
-* **DAX Measures**: `SUM` was used to to develop key performance metrics for **Total Sales**, **Total Qty (Quantity)**, and **Total Profit**. Furthermore, `DIVIDE` and `DISTINCTCOUNT` were used for **Average Sales (per Order)** to ensure the per-transaction analysis
+* **DAX Measures**: `SUM` was used to develop key performance metrics for **Total Sales**, **Total Qty (Quantity)**, and **Total Profit**. Furthermore, `DIVIDE` and `DISTINCTCOUNT` were used for **Average Sales (per Order)** to ensure the per-transaction analysis
 * **Visualization**: Charts and graphs were created to visualize sales trends and profitability based on the processed data.
 
 ## Dashboard Features
 
 ### Page 1: Sales Performance Overview
-This page provides a high-level view of company health and geographic performance.
+This page provides a high-level view of company financial and geographic performance.
 * **Key Visuals**: Sales and Profit Trends, Sales by Country, and Regional breakdowns.
 * **Objective**: Quick assessment of revenue targets and geographic trends.
-<img width="1437" height="811" alt="Sales Performance Overview" src="https://github.com/user-attachments/assets/5c11ac2a-9190-4605-8445-a59728dccdc6" />
+<img width="1315" height="741" alt="image" src="https://github.com/user-attachments/assets/2728777c-1169-450e-8383-3104070bb90d" />
+
 
 
 
@@ -47,13 +48,15 @@ This page provides a high-level view of company health and geographic performanc
 This page dives into the operational details to identify drivers of sales and areas for improvement.
 * **Key Visuals**: Sales by Product Subcategory, Top/Bottom 10 Products, and a demographic Matrix (Color/Gender).
 * **Objective**: Inventory management, and Identifying sales patterns by gender and product color.
-<img width="1436" height="810" alt="Product   Customer Insights" src="https://github.com/user-attachments/assets/b0516605-ff10-4929-bf0f-b5575fc1dab0" />
+<img width="1315" height="741" alt="image" src="https://github.com/user-attachments/assets/fd9c8499-614f-47c2-9262-d1c9c95c4742" />
+
 
 ### Key Insights from the Analysis
 - **Regional Dominance**: While the United States leads in total sales followed by Australia, accounting for over 60% of sales, Australia and Germany actually show the highest average sales per transaction.
 - **Product Preferences**: Specific product colors, such as black and red, drive the majority of sales volumn across all regions.
 - **Profitability Drivers**: High-column products do not always correlate with high profit margins, indicating the need for targeted pricing strategies on items.
 - **Seasonal Trends**: Sales volumn shows distinct spikes during holiday (Christmas) periods, suggesting seasonal inventory management is critical.
+
 
 
 
