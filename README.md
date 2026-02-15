@@ -39,7 +39,8 @@ An interactive sales dashboard was built to analyze key performance indicators:
 This page provides a high-level view of company financial and geographic performance.
 * **Key Visuals**: Sales and Profit Trends, Sales by Country, and Regional breakdowns.
 * **Objective**: Quick assessment of revenue targets and geographic trends.
-<img width="1315" height="741" alt="image" src="https://github.com/user-attachments/assets/2728777c-1169-450e-8383-3104070bb90d" />
+<img width="1313" height="742" alt="Sales Performance Overview" src="https://github.com/user-attachments/assets/31b322c4-a85f-4265-9161-6eba81d43cf0" />
+
 
 
 
@@ -56,6 +57,7 @@ This page dives into the operational details to identify drivers of sales and ar
 - **Product Preferences**: Specific product colors, such as black and red, drive the majority of sales volumn across all regions.
 - **Profitability Drivers**: High-column products do not always correlate with high profit margins, indicating the need for targeted pricing strategies on items.
 - **Seasonal Trends**: Sales volumn shows distinct spikes during holiday (Christmas) periods, suggesting seasonal inventory management is critical.
+
 
 
 
